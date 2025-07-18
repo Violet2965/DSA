@@ -1,8 +1,9 @@
 class pattern {
     public static void main(String[] args) {
-        pattern1(5);
-        pattern2(4);
-        pattern3(2);
+        
+        String s="abba";
+        System.out.println(isPalindrom(s));
+        
 
     }
 
@@ -46,5 +47,14 @@ class pattern {
             System.out.println();
         }
 
+    }
+
+    public static int isPalindrom(String s){
+        int n = s.length();
+        for (int i = 0; i < n / 2; i++) {
+            if (s.charAt(i) != s.charAt(n - i - 1))
+            return 0;
+            }
+            return 1;
     }
 }
