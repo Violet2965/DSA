@@ -1,11 +1,7 @@
 class pattern {
     public static void main(String[] args) {
-        
-        String s="abba";
-        String s1="Shivani";
-        System.out.println(isPalindrom(s));
-        System.out.println(revString(s1));
 
+        pattern5(6);
 
     }
 
@@ -51,20 +47,16 @@ class pattern {
 
     }
 
-    public static int isPalindrom(String s){
-        int n = s.length();
-        for (int i = 0; i < n / 2; i++) {
-            if (s.charAt(i) != s.charAt(n - i - 1))
-            return 0;
+    public static void pattern5(int n) {
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= n ; j++) {
+                if (i == 1 || i == n || j == 1 || j == n) {
+                    System.out.print("*");
+                } else {
+                    System.out.print(" ");
+                }
             }
-            return 1;
-    }
-
-    static String revString(String s){
-        String rev = "";
-        for (int i = s.length() - 1; i >= 0; i--)
-        rev = rev + s.charAt(i);
-        return rev;
-        
+            System.out.println();
+        }
     }
 }
