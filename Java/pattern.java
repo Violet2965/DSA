@@ -1,6 +1,6 @@
 class pattern {
     public static void main(String[] args) {
-
+        pattern5(5);
         pattrn6(4);
     }
 
